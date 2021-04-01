@@ -1,64 +1,71 @@
-# Tarea X: Nombre de la tarea :school_satchel:
-
-
-Un buen ```README.md``` puede marcar una gran diferencia en la facilidad con la que corregimos una tarea, y consecuentemente cómo funciona su programa, por lo en general, entre más ordenado y limpio sea éste, mejor será 
-
-Para nuestra suerte, GitHub soporta el formato [MarkDown](https://es.wikipedia.org/wiki/Markdown), el cual permite utilizar una amplia variedad de estilos de texto, tanto para resaltar cosas importantes como para separar ideas o poner código de manera ordenada ([pueden ver casi todas las funcionalidades que incluye aquí](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet))
-
-Un buen ```README.md``` no tiene por que ser muy extenso tampoco, hay que ser **concisos** (a menos que lo consideren necesario) pero **tampoco pueden** faltar cosas. Lo importante es que sea claro y limpio 
-
-**Dejar claro lo que NO pudieron implementar y lo que no funciona a la perfección. Esto puede sonar innecesario pero permite que el ayudante se enfoque en lo que sí podría subir su puntaje.**
+# Tarea 0: DCConecta2
 
 ## Consideraciones generales :octocat:
 
-<Descripción de lo que hace y que **_no_** hace la tarea que entregaron junto
-con detalles de último minuto y consideraciones como por ejemplo cambiar algo
-en cierta línea del código o comentar una función>
+*Mi DCConecta2 funciona bien el menú de inicio, puede registrar, iniciar sesión y salirse de la aplicación.
+*Después de registrarse o iniciar sesión entrea all menú de chats y despliega las opciones.
+*Del menú de chats se puedden ver los contactos y ver la conversación, además se puede enviar mensajes.
+*Ver grupos quedó mal implementado ya que muestra todos los grupos y no solo el que uno pide.
+*Los archivos estan bien implementados, pudiendo abrir y sobrescribir en ellos.
+*"paramentros.py" no fue ocupado.
 
 ### Cosas implementadas y no implementadas :white_check_mark: :x:
+*Menú de inicio:
+	Requisitos:
+		[x] El menú de Inicio contiene todas las opciones pedidas en el enunciado.
+	Iniciar sesión:
+		[x] El usuario puede iniciar sesión, verificando que el nombre de usuario coincida con los datos del archivo usuarios.csv.
+		[x] Si se ingresa un nombre no válido se informa al usuario y se vuelve al Menú de Inicio.
+	Registrar usuario:
+		[x] Se puede registrar un nuevo usuario, el nombre cumple con los requisitos dados en el enunciado (el usuario no está registrado, largo de [3, 15] sin incluir comas)
+		[x] Si se ingresa un nombre de usuario no válido, se informa y se vuelve al Menú de Inicio
+		[x] El nuevo usuario queda guardado con el archivo usuarios.csv
+	Salir:
+		[x]Se puede salir del programa de forma correcta.
 
-* <Nombre item pauta<sub>1</sub>>: Hecha completa
-* <Nombre item pauta<sub>2</sub>>: Me faltó hacer <insertar qué cosa faltó>
-    * <Nombre subitem pauta<sub>2.1</sub>>: Hecha completa 
-    * <Nombre subitem pauta<sub>2.2</sub>>: Me faltó hacer <insertar qué cosa faltó>
-    * ...
-* <Nombre item pauta<sub>3</sub>>: Me faltó hacer <insertar qué cosa faltó>
-* ...
-* <Nombre item pauta<sub>n</sub>>: Me faltó hacer <insertar qué cosa faltó>
+*Flujo del programa:	
+	Menú de chats:
+		[x] El menú contiene todas las opciones mínimas pedidas en el enunciado.
+		[x] Se puede volver al Menú de Inicio.
+	Menú de contactos:
+		[x] El menú tiene las opciones de ver contactos, añadir contactos y volver al menú anterior.
+		[x] Al seleccionar ver contactos, se muestran todos los contactos del usuario correctamente.
+		[ ] Al seleccionar un contacto, se despliega el historial. El historial se actualiza correctamente.
+		[x] Se puede escribir un mensaje. El mensaje queda registrado correctamente en el archivo mensajes.csv, respetando el formato.
+		[ ] Al escribir el comando VOLVER_FRASE, el usuario deberá volver a la opción ver contactos del menu de contactos.
+		[ ] Se puede añadir un contacto de forma correcta. El contacto se almacena en el archivo contactos.csv
+		[ ] Se verifica que el contacto sea válido. En caso contrario, se advierte al usuario y se vuelve al Menú de Contactos.
+		[x] Se puede volver al Menú de Chats.
+	Menú de grupos:
+		[ ] El menú tiene las opciones de ver grupos, crear grupo y volver al menú anterior.
+		[?] Al seleccionar ver grupos, se muestran todos los grupos a los que pertenece el usuario.
+		[ ] Al seleccionar un grupo, se despliega el historial de forma correcta y en orden ascendente. El historial se actualiza correctamente.
+		[ ] Se puede escribir un mensaje. El mensaje queda registrado correctamente en el archivo mensajes.csv, respetando el formato.
+		[ ] Al escribir el comando VOLVER_FRASE, el usuario deberá volver a la opción ver grupos del menu de grupos
+		[ ] Al escribir el comando ABANDONAR_FRASE, el usuario abandona el grupo, actualizando el archivo grupos.csv, y luego volver a la opción ver grupos del menu de grupos
+		[ ] Al abandonar un grupo, se escribe un último mensaje de forma autómatica, quedando guardado en el archivo mensajes.csv
+		[ ] Al crear un grupo, este queda registrado para todos los usuarios pertenecientes en el archivo grupos.csv
+		[ ] Se verifica que el formato del grupo cumpla con las condiciones solicitadas (nombre del grupo no repetido, largo mínimo de 1 sin contener comas)
+		[ ] Se verifica que el formato de los integrantes sea en el formato correcto y que los usuarios existan.
+  		[ ] En caso de que no se pueda crear el grupo, se notifica al usuario y se vuelve al menú actual.
+		[x] Se puede volver al Menú de Chats.
+	Chats:
+		[x] Se muestra cada mensaje de forma separada, mostrando la fecha, hora, emisor y el contenido.
+		[x] Los mensajes se muestran en orden ascendente.
+		[x] Se muestra cada mensaje de forma separada, mostrando el nombre del grupo, fecha, hora, emisor y el contenido.
+		[ ] Los mensajes se muestran en orden ascendente.
+
+*Archivos: [x]
+
+
+
 
 ## Ejecución :computer:
-El módulo principal de la tarea a ejecutar es  ```archivo.py```. Además se debe crear los siguientes archivos y directorios adicionales:
-1. ```archivo.ext``` en ```ubicación```
-2. ```directorio``` en ```ubicación```
-3. ...
+El módulo principal de la tarea a ejecutar es  "main.py". Además se debe crear los siguientes archivos y directorios adicionales:
+1. "contactos.csv"
+2. "grupos.csv"
+3. "usuarios.csv"
 
-
-## Librerías :books:
-### Librerías externas utilizadas
-La lista de librerías externas que utilicé fue la siguiente:
-
-1. ```librería_1```: ```función() / módulo```
-2. ```librería_2```: ```función() / módulo``` (debe instalarse)
-3. ...
-
-### Librerías propias
-Por otro lado, los módulos que fueron creados fueron los siguientes:
-
-1. ```librería_1```: Contiene a ```ClaseA```, ```ClaseB```, (ser general, tampoco es necesario especificar cada una)...
-2. ```librería_2```: Hecha para <insertar descripción **breve** de lo que hace o qué contiene>
-3. ...
-
-## Supuestos y consideraciones adicionales :thinking:
-Los supuestos que realicé durante la tarea son los siguientes:
-
-1. <Descripción/consideración 1 y justificación del por qué es válido/a> 
-2. <Descripción/consideración 2 y justificación del por qué es válido/a>
-3. ...
-
-PD: <una última consideración (de ser necesaria) o comentario hecho anteriormente que se quiera **recalcar**>
-
-
--------
 
 
 

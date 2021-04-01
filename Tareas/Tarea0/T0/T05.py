@@ -119,9 +119,9 @@ while respuesta_chat==0:
             for k in range(len(lista_chat)):
                 if (nombre_usuario2==lista_chat[k][1] or nombre_usuario2==lista_chat[k][2]) and (nombre==lista_chat[k][1] or nombre==lista_chat[k][2]):
                     if nombre_usuario2==lista_chat[k][1]:
-                        print(lista_chat[k][3], lista_chat[k][1], lista_chat[k][4])
+                        print(lista_chat[k][3],lista_chat[k][1],lista_chat[k][4])
                     if nombre_usuario2==lista_chat[k][2]:
-                        print(lista_chat[k][3], lista_chat[k][1], lista_chat[k][4])
+                        print(lista_chat[k][3],lista_chat[k][1],lista_chat[k][4])
             mensaje_devuelta=input()
 
             if mensaje_devuelta=="VOLVER_FRASE":
@@ -160,4 +160,4 @@ while respuesta_chat==0:
                     print(nombre_grupo)
                     for j in range(len(lista_grupos)):
                         if nombre_grupo==lista_grupos[j][3]:
-                            print(lista_grupos[j][3], lista_grupos[j][1], lista_grupos[j][4])
+                            print(lista_grupos[j][3],lista_grupos[j][1],lista_grupos[j][4])
